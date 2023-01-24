@@ -10,48 +10,33 @@ package model;
  * @author balin
  */
 public class Contact {
-    private String officephone;
-    private String officeemail;
-    private String personalphone;
-    private String personalemail;
+    private String phone;
+    private String email;
+    
+    
     public Contact()
     {
-        this.officephone="";
-        this.officeemail="";
-        this.personalemail="";
-        this.personalphone="";    
+        this.phone="";
+        this.email="";
+         
  }
 
-    public String getOfficephone() {
-        return officephone;
+    public String getPhone() {
+        return phone;
     }
 
-    public String getOfficeemail() {
-        return officeemail;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getPersonalphone() {
-        return personalphone;
+    public String getEmail() {
+        return email;
     }
 
-    public String getPersonalemail() {
-        return personalemail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setOfficephone(String officephone) {
-        this.officephone = officephone;
-    }
-
-    public void setOfficeemail(String officeemail) {
-        this.officeemail = officeemail;
-    }
-
-    public void setPersonalphone(String personalphone) {
-        this.personalphone = personalphone;
-    }
-
-    public void setPersonalemail(String personalemail) {
-        this.personalemail = personalemail;
-    }
+   
     
 }

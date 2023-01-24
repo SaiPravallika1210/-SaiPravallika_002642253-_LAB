@@ -10,94 +10,58 @@ package model;
  * @author balin
  */
 public class Address {
-    String currentstreetname;
-    String currentaptno;
-    String currentcity;
-    String currentzip;
-    String Permstreetname;
-    String permaptno;
-    String permcity;
-    String permzip;
+    String streetname;
+    String aptno;
+    String city;
+    String zip;
+    
 
     
     //public void setStreet(String street) {
       //  this.street = street;
     //}
 
-    public String getCurrentstreetname() {
-        return currentstreetname;
+    public String getStreetname() {
+        return streetname;
     }
 
-    public String getCurrentaptno() {
-        return currentaptno;
+    public void setStreetname(String streetname) {
+        this.streetname = streetname;
     }
 
-    public String getCurrentcity() {
-        return currentcity;
+    public String getAptno() {
+        return aptno;
     }
 
-    public String getCurrentzip() {
-        return currentzip;
+    public void setAptno(String aptno) {
+        this.aptno = aptno;
     }
 
-    public String getPermstreetname() {
-        return Permstreetname;
+    public String getCity() {
+        return city;
     }
 
-    public String getPermaptno() {
-        return permaptno;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getPermcity() {
-        return permcity;
+    public String getZip() {
+        return zip;
     }
 
-    public String getPermzip() {
-        return permzip;
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
-    public void setCurrentstreetname(String currentstreetname) {
-        this.currentstreetname = currentstreetname;
-    }
-
-    public void setCurrentaptno(String currentaptno) {
-        this.currentaptno = currentaptno;
-    }
-
-    public void setCurrentcity(String currentcity) {
-        this.currentcity = currentcity;
-    }
-
-    public void setCurrentzip(String currentzip) {
-        this.currentzip = currentzip;
-    }
-
-    public void setPermstreetname(String Permstreetname) {
-        this.Permstreetname = Permstreetname;
-    }
-
-    public void setPermaptno(String permaptno) {
-        this.permaptno = permaptno;
-    }
-
-    public void setPermcity(String permcity) {
-        this.permcity = permcity;
-    }
-
-    public void setPermzip(String permzip) {
-        this.permzip = permzip;
-    }
+   
     
 
     public Address(){
-        this.currentstreetname="";
-        this.currentaptno="";
-        this.currentcity="";
-        this.currentzip="";
-        this.Permstreetname="";
-        this.permaptno="";
-        this.permcity="";
-        this.permzip="";
+        this.streetname="";
+        this.aptno="";
+        this.city="";
+        this.zip="";
+        
         }
 
 }

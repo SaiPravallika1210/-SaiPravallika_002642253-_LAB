@@ -611,39 +611,42 @@ public class NewJFrame extends javax.swing.JFrame {
        String Personalemail=Personalemailfield.getText();
       // String Currentstreetname=Currentstreetfield.getText();
       
-       String Currentaptno=Currentaptfield.getText();
-       String Currentcity= Currentcityfield.getText();
-       String Currentzip= Currentzipfield.getText();
+       String aptno=Currentaptfield.getText();
+       String city= Currentcityfield.getText();
+       String zip= Currentzipfield.getText();
        
        String Permstreetname=Permstreetfield.getText();
        String Permaptno=Permaptfield.getText();
        String Permcity=Permcityfield.getText();
        String Permzip=Permzipfield.getText();
-       String Currentstreetname=Currentstreetfield.getText();
+       String streetname=Currentstreetfield.getText();
        
-        this.person.setfirstName(FirstName);
-        this.person.setlastname(LastName);
+        this.person.setFirstname(FirstName);
+        this.person.setLastname(LastName);
         this.person.setNUID(NUID);
-        this.person.setcollegename(CollegeName);
+        this.person.setCollegename(CollegeName);
         
         
                // person obj2=new person();
-        Address address=this.person.getAddress();
-        address.setCurrentstreetname(Currentstreetname);
-        address.setCurrentaptno(Currentaptno);
-        address.setCurrentcity(Currentcity);
-        address.setCurrentzip(Currentzip) ;
+        Address current=this.person.getCurrent();
+        Address permanent=this.person.getPermanent();
+        current.setStreetname(streetname);
+        current.setAptno(aptno);
+        current.setCity(city);
+        current.setZip(zip) ;
+        permanent.setStreetname(Permstreetname);
+        permanent.setAptno(Permaptno);
+        permanent.setCity(Permcity);
+        permanent.setZip(Permzip) ;
         
-        address.setPermstreetname(Permstreetname);
-        address.setPermaptno(Permaptno);
-        address.setPermcity(Permcity);
-        address.setPermzip(Permzip);
         
-        Contact contact=this.person.getContact();
-        contact.setOfficephone(Officephone);
-        contact.setOfficeemail(Officeemail);
-        contact.setPersonalphone(Personalphone);
-        contact.setPersonalemail(Personalemail);
+        
+        Contact office=this.person.getOffice();
+        Contact personal=this.person.getPersonal();
+        office.setPhone(Officephone);
+        office.setEmail(Officeemail);
+        personal.setPhone(Personalphone);
+        personal.setEmail(Personalemail);
         
         display();
         
@@ -693,26 +696,26 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ViewcurrentcityActionPerformed
 private void display(){
-    Viewfirstname.setText(this.person.getfirstName());
-    Viewlastname.setText(this.person.getlastname());
-    Viewcollegename.setText(this.person.getcollegename());
+    Viewfirstname.setText(this.person.getFirstname());
+    Viewlastname.setText(this.person.getLastname());
+    Viewcollegename.setText(this.person.getCollegename());
     Viewnuid.setText(this.person.getNUID());
     
 //    Viewcurrentstreet.setText(this.person.getAddress().)
-    Viewcurrentstreet.setText(this.person.getAddress().getCurrentstreetname());
-    Viewcurrentapt.setText(this.person.getAddress().getCurrentaptno());
-    Viewcurrentcity.setText(this.person.getAddress().getCurrentcity());
-    Viewcurrentzip.setText(this.person.getAddress().getCurrentzip());
+    Viewcurrentstreet.setText(this.person.getCurrent().getStreetname());
+    Viewcurrentapt.setText(this.person.getCurrent().getAptno());
+    Viewcurrentcity.setText(this.person.getCurrent().getCity());
+    Viewcurrentzip.setText(this.person.getCurrent().getZip());
     
-    Viewpermstreet.setText(this.person.getAddress().getPermstreetname());
-    Viewpermapt.setText(this.person.getAddress().getPermaptno().toString());
-    Viewpermcity.setText(this.person.getAddress().getPermcity());
-    Viewpermzip.setText(this.person.getAddress().getPermzip());
+    Viewpermstreet.setText(this.person.getPermanent().getStreetname());
+    Viewpermapt.setText(this.person.getPermanent().getAptno().toString());
+    Viewpermcity.setText(this.person.getPermanent().getCity());
+    Viewpermzip.setText(this.person.getPermanent().getZip());
     
-    Viewofficephone.setText(this.person.getContact().getOfficephone().toString());
-   Viewofficeemail.setText(this.person.getContact().getOfficeemail());
-   Viewpersonalphone.setText(this.person.getContact().getPersonalphone());
-   Viewpersonalemail.setText(this.person.getContact().getPersonalemail());
+    Viewofficephone.setText(this.person.getOffice().getPhone().toString());
+   Viewofficeemail.setText(this.person.getOffice().getEmail());
+   Viewpersonalphone.setText(this.person.getPersonal().getPhone());
+   Viewpersonalemail.setText(this.person.getPersonal().getEmail());
     
     
 }

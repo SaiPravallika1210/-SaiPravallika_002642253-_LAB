@@ -14,51 +14,45 @@ public class person {
     private String lastname;
     private String collegename;
     String NUID;
-    Address address;
-    Contact contact;
+    Address current;
+    Address permanent;
+    Contact office;
+    Contact personal;
+    
     public person(){
         this.firstname="";
         this.lastname="";
         this.collegename="";
         this.NUID="";
-        this.address=new Address();
-        this.contact=new Contact();
+        this.current=new Address();
+        this.permanent=new Address();
+        this.personal=new Contact();
+        this.office=new Contact();
+        
     }
 
-    public String getfirstName() {
+    public String getFirstname() {
         return firstname;
     }
-    public String getlastname(){
-        return lastname;
-    }
-    public String getcollegename(){
-        return collegename;
-    }
-    public Address getAddress() {
-        return address;
-    }
 
-    public void setfirstName(String firstname) {
+    public void setFirstname(String firstname) {
         this.firstname = firstname;
     }
-    public void setlastname(String lastname){
-        this.lastname= lastname;
-    }
-    public void setcollegename(String collegename)
-    {
-       this.collegename= collegename;
-    }
-    
-    public void setAddress(Address address) {
-        this.address = address;
+
+    public String getLastname() {
+        return lastname;
     }
 
-    public Contact getContact() {
-        return contact;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public void setContact(Contact contact) {
-        this.contact = contact;
+    public String getCollegename() {
+        return collegename;
+    }
+
+    public void setCollegename(String collegename) {
+        this.collegename = collegename;
     }
 
     public String getNUID() {
@@ -68,6 +62,40 @@ public class person {
     public void setNUID(String NUID) {
         this.NUID = NUID;
     }
+
+    public Address getCurrent() {
+        return current;
+    }
+
+    public void setCurrent(Address current) {
+        this.current = current;
+    }
+
+    public Address getPermanent() {
+        return permanent;
+    }
+
+    public void setPermanent(Address permanent) {
+        this.permanent = permanent;
+    }
+
+    public Contact getOffice() {
+        return office;
+    }
+
+    public void setOffice(Contact office) {
+        this.office = office;
+    }
+
+    public Contact getPersonal() {
+        return personal;
+    }
+
+    public void setPersonal(Contact personal) {
+        this.personal = personal;
+    }
+
+    
     
     
 }
